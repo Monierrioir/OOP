@@ -1,0 +1,19 @@
+#include <iostream>
+
+class Nokta{
+public:
+    int x,y;
+    void değer(int _x,int _y){
+        x=_x;
+        y= _y;
+    }
+};
+
+
+int main() {
+   Nokta n;
+   n.değer(2,7);
+
+   std::cout << n.x << "," <<n.y << std::endl;
+    return 0;
+}
