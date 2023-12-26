@@ -1,0 +1,27 @@
+#include <iostream>
+namespace so1{
+    int x=15;
+    void Boo(){
+        int x=7;
+        std::cout <<x;
+    }
+}
+namespace so2{
+    int x=15;
+    void Boo(){
+        int x=7;
+        std::cout <<x;
+    }
+}
+
+void Foo(){
+    int x=5;
+    std::cout<<x;
+}
+
+int main() {
+    int x=10;
+    std::cout <<x;
+
+    return 0;
+}
