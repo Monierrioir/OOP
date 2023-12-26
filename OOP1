@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+class point {
+public:
+    int x, y;
+
+    void value(int _x, int _y) {
+        x = _x;
+        y = _y;
+    }
+
+    void print() {
+        cout << x << "," << y << endl;
+    }
+
+    bool inf() {
+        return x == 0 && y == 0;
+    }
+};
+
+int main() {
+    point n;
+    point n2;
+    point* n3;
+    point* n4;
+    point* array[10];
+    point* pArray;
+    pArray = new point[10];
+
+    for (int i = 0; i < 10; ++i) {
+        array[i] = new point();
+        array[i]->value(i, i + 2);
+        (pArray + i)->value(i + 5, i + 10);
+    }
+
+    for (int i = 0; i < 10; ++i) {
+        array[i]->print();
+        (pArray + i)->print();   
+        cout << endl;
+    }
+
+    n3 = &n2;
+    n4 = new point();
+
+    n.value(0, 0);
+    n.print();
+    n2.value(7, 8);
+    n2.print();
+
+    if (n.inf())
+        cout << "n is the initial point." << endl;
+    if (n2.inf())
+        cout << "n2 is the initial point." << endl;
+
+    cout << "pointer value of n3" << endl;
+    n3->print();
+    n4->value(100, 200);
+    n4->print();
+
+    return 0;
+}
