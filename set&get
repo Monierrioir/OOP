@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+class Nokta {
+private:
+    int y;
+    int x;
+
+public:
+    int getX();
+    int getY();
+    void setX(int);
+    void setY(int);
+    void print();
+    bool initial();
+};
+
+int Nokta::getX() {
+    return x;
+}
+
+int Nokta::getY() {
+    return y;
+}
+
+void Nokta::setX(int a) {
+    x = a;
+}
+
+void Nokta::setY(int b) {
+    if(b>5)
+    y = b;
+    else
+        y=2;
+}
+
+void Nokta::print() {
+    cout << x << "," << y << endl;
+}
+
+bool Nokta::initial() {
+    return (x == 0 && y == 0);
+}
+
+int main() {
+    Nokta n1;
+    n1.setX(10);
+    n1.setY(4);
+    cout << n1.getX() << "," << n1.getY() << endl;
+
+    return 0;
+}
