@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+class Nokta {
+public:
+    int x, y;
+
+    void value(int, int);
+
+    void print();
+
+    bool initial();
+};
+
+
+void Nokta::value(int a, int b) {
+x=a;
+y=b;
+}
+void Nokta::print() {
+    std::cout<< x<< ","<<y<<endl;
+}
+bool Nokta::initial() {
+    return (x==0 && y==0);
+}
+
+int main() {
+    Nokta n,c,*n3,*n4;
+    n3=&c;
+    n4=new Nokta();
+    //As array
+    Nokta arr[10];
+    Nokta *parr;
+    parr=new Nokta[10];
+//print the elements of array
+    for(int i=0;i<10;i++){
+        arr[i].value(i,i+2);
+        arr[i].print();
+    }
+    n.value(0,0);
+    c.value(5,4);
+    n.print();
+    c.print();
+
+    if (n.initial())
+        std::cout<<"n is the initial point."<<endl;
+    if (c.initial())
+        std::cout<<"c is the initial point."<<endl;
+    n3->value(7,2);
+    n3->print();
+    c.print();
+    n4->value(100,200);
+    n4->print();
+
+    return 0;
+}
