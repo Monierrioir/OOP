@@ -1,27 +1,29 @@
 #include <iostream>
-namespace so1{
-    int x=15;
-    void Boo(){
-        int x=7;
-        std::cout <<x;
-    }
-}
-namespace so2{
-    int x=15;
-    void Boo(){
-        int x=7;
-        std::cout <<x;
-    }
-}
 
-void Foo(){
-    int x=5;
-    std::cout<<x;
+using namespace std;
+//eğer scop içerisinde bir x değerine sahip değilsek
+//global değişkenin içini ararız
+
+namespace pro1{
+    int x=15;
+    void foo(){
+        int x=5;
+        std::cout<<x<<endl;
+    }
+}
+namespace pro2{
+    int x=3;
+    void boo(){
+        int x=7;
+        std::cout<<x<<endl;
+    }
 }
 
 int main() {
-    int x=10;
-    std::cout <<x;
+   std::cout<<pro2::x<<endl;
+   std::cout<<pro1::x<<endl;
+   pro1::foo();
+   pro2::boo();
 
     return 0;
 }
