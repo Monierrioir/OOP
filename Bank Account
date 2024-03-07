@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Bank{
+private:
+    int account_no;
+    double balance;
+public:
+    Bank(int acc,double bal){
+        account_no=acc;
+        balance=bal;
+    }
+    void setBalance(double balance){
+        this->balance=balance; // this pointerı ile veri elemanına erişim sağlar
+    }
+    double getBalance() {
+        return balance;
+    }
+};
+int main(){
+    Bank ac1(1,2.3);
+    Bank ac2(4,5.67);
+
+    ac1.setBalance(10.0);
+    ac2.setBalance(25.47);
+    cout<<"Account 1 balance is: "<<ac1.getBalance()<<endl;
+    cout<<"Account 2 balance is: "<<ac2.getBalance()<<endl;
+
+
+    return 0;
+}
