@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main() {
+  using namespace std;
+    int number=10;
+    int *ptr = &number;
+
+    cout<<number<<endl;
+    cout<<*ptr<<endl; //numbera eşit olur
+
+    int arr[]={10,20,30,40,50};
+
+    int *ptr1=arr;
+    ptr1[2]=100;
+    cout<<arr[2]<<endl; // yeni eleman 100 olur
+    
+
+    return 0;
+}
