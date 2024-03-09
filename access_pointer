@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+struct person{
+    string name;
+    int age;
+
+
+};
+
+
+int main() {
+  person ob1;
+  person *ptr=&ob1;
+
+  ptr->name="Rory"; //ıf ı want to range a pointer I use the -> sign
+  ptr->age=20;
+  ob1.name="Aysenur"; //ptr->name="Aysenur";
+
+  cout<<ptr->name<<endl;
+  cout<<ptr->age<<endl;
+
+
+
+    return 0;
+}
