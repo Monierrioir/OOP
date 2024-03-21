@@ -1,0 +1,64 @@
+#include <iostream >
+using namespace std;
+class product
+{
+    int pro_code[50];
+    float pro_price[50];
+    int count;
+public:
+    void cnt()
+    {
+        count=0;
+    }
+    void getproduct();
+    void displaysum();
+    void displayproduct();
+};
+
+void product::getproduct() {
+    int num;
+    cout<<"Please enter a product number: "<<endl;
+    cin>>pro_code[count];
+    cout<<"Please enter a product price: "<<endl;
+    cin>>pro_price[count];
+    count++;
+
+}
+void product::displaysum() {
+    int sum=0;
+    for (int i = 0; i < count; ++i) {
+        sum=sum+pro_price[i];
+        cout<<"The total value:  "<<sum<<endl;
+
+    }
+}
+
+void product::displayproduct() {
+    for (int i = 0; i < count; ++i) {
+        cout<<"The product number is: "<<pro_code[i]<<endl;
+        cout<<"The product price is: "<<pro_price[i];
+    }
+}
+
+
+int main(){
+int number;
+product ob;
+ob.cnt();
+cout<<"Enter a choice: "<<endl;
+cin>>number;
+    switch (number) {
+
+        case 1:
+            ob.getproduct();
+        case 2:
+            ob.displaysum();
+        case 3:
+            ob.displayproduct();
+        case 4:
+            break;
+
+    }
+
+    return 0;
+}
