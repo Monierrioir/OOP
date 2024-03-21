@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+#define SIZE 10
+
+class stack {
+    char stck[SIZE];
+    int top=0;
+public:
+    void push(char ch);
+    char pop();
+};
+
+void stack::push(char ch) {
+    if(top==SIZE){//top genellikle en üstteki elemanın indeksini tutar.
+        return; //sıze eşit çıkarsa yığın doludur
+}
+    else{
+        stck[top]=ch;//ch en üste ata
+        top++;//top elemanı bir sonrakine aktar
+    }
+
+};
+
+char stack::pop() {
+    if (top>0){
+        top--;
+        return stck[top];
+    }
+    else
+        return 0;
+}
+int main() {
+stack s1,s2;
+for(int i=0;i<3;i++){
+    s1.push('a'+i);
+}
+s2=s1;
+    for (int i = 0; i < 3; ++i) {
+        cout<<"Pop s1: "<<s1.pop()<<endl;
+    }
+    for (int i = 0; i < 3; ++i) {
+        cout<<"Pop s2: "<<s2.pop()<<endl;
+
+    }
+
+return 0;
+}
