@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class myclass {
+int a,b;
+public:
+    void set(int i,int j){
+        a=i;b=j;
+    }
+    void show(){
+        cout<<a<<' '<<b<<endl;
+    }
+};
+class yourclass{
+    int a,b;
+public:
+    void set(int i,int j){
+        a=i;b=j;
+    }
+    void show(){
+        cout<<a<<' '<<b<<endl;
+    }
+
+
+
+};
+int main() {
+myclass ob1;
+yourclass o2;
+ob1.set(10,8);
+o2=ob1; //C dilinde farklı sınıflar arasında atama yapmak mümkün değildir. Hata verir.
+ob1.show();
+o2.show();
+
+return 0;
+}
