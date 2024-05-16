@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class base {
+int j;
+public:
+
+base(int n)
+{
+    j = n;
+    cout << "base constructor " << j << endl;
+
+}
+
+~base() {cout << "base deconsructor" << endl;}
+
+};
+
+class derived : public base {
+int y;
+public:
+
+derived(int n) : base(n)
+{
+    y = n;
+    cout << "derived constructor " << y <<endl;
+
+}
+~derived() { cout << "derived constructor" << endl;}
+
+};
+
+int main()
+{
+
+    derived o(10);
+    return 0;
+
+}
