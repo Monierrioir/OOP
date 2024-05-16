@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+class base {
+int x;
+public:
+    void setx(int n) { x = n;}
+    void showx() {cout << x << '\n';}
+};
+
+class derived : private base {
+int y;
+public:
+    void setxy(int n) { setx(n); y = n;}
+    void showxy() {cout << y << '\n'; showx();}
+
+
+};
+
+int main()
+{
+  
+    base obb;
+    derived obd;
+   
+    obb.setx(10);
+    obd.setxy(5);
+
+    obb.showx();
+    obd.showxy();
+
+    return 0;
+}
