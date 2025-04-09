@@ -1,0 +1,23 @@
+//A variable refers to an object
+Student s = new Student();
+
+//May refer to different objects at different points in time
+s = new Student("Ayşe");
+s = new Student("Ali");
+
+//An object can be referred to by several different variables at the same time
+Student s1 = new Student("Mehmet");
+Student s2 = s1;
+
+
+Shape s;
+
+s = new Circle();
+s.getArea(); // → Circle’ın getArea() method’u çalışır
+
+s = new Rectangle();
+s.getArea(); // → Rectangle’ın getArea() method’u çalışır
+
+/*👉 s.getArea() satırı her iki durumda da aynıdır,
+ama çalıştırılan method farklıdır!
+Bu farkı sadece program çalışırken anlayabiliriz.*/
